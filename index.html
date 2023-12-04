@@ -26,7 +26,7 @@
                 <button class="bottone" @click="aggiungiCarta()">Inserisci</button>
             </div>
             <ul class="lista-carte">
-                <li class="carta" v-for='card in listaCarte'>
+                <li class="carta" v-for='(card, index) in listaCarte'>
                     <p v-if= "card.done === false">
                         {{card.text}}
                     </p>
@@ -34,7 +34,7 @@
                         <s> {{card.text}} </s>
                     </p>
                     <span>
-                        <i class="fa-regular fa-circle-xmark"></i>
+                        <i class="fa-regular fa-circle-xmark" @click="rimuoviEl(card.index)"></i>
                     </span>
                 </li>
             </ul>

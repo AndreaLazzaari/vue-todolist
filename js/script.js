@@ -69,6 +69,9 @@ createApp({
         
         // this.nuovaCarta = carta
 
+      },
+      rimuoviEl(index) {
+        this.listaCarte.splice(index, 1)
       }
     }
 }).mount('#app')
