@@ -27,11 +27,11 @@
             </div>
             <ul class="lista-carte">
                 <li class="carta" v-for='card in listaCarte'>
-                    <p v-if="listaCarte.done === true">
-                       <s> {{card.text}} </s>
+                    <p v-if= "listaCarte.done === false">
+                        {{card.text}}
                     </p>
                     <p v-else>
-                        {{card.text}}
+                        <s> {{card.text}} </s>
                     </p>
                     <span>
                         <i class="fa-regular fa-circle-xmark"></i>
