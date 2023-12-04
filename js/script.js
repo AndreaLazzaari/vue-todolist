@@ -4,7 +4,7 @@ const { createApp } = Vue
 createApp({
     data() {
     return {
-        listaCarteBannate : [
+        listaCarte : [
             {
                 text : 'BirthingPod',
                 done : true
@@ -58,6 +58,10 @@ createApp({
     }
     }, 
     methods: {
-        
+        nomeSbarrato(carta){
+            if (this.listaCarte.done === true){
+                return carta.strike()
+            }
+        }
     }
 }).mount('#app')

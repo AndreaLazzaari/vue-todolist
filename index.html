@@ -8,6 +8,8 @@
     <!-- Link Css -->
     <link rel="stylesheet" href="./styles/style.css">
 
+    <!-- Link Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
@@ -18,9 +20,22 @@
             Lista Carte Mtg
         </h1>
 
-        <div class="container">
-            
-        </div>
+        <main class="container">
+            <div class="taskbar">
+                <input type="text" class="nuovo-elemento-lista" name="cartaMtg" id="cartaMtg">
+                <button class="bottone">Inserisci</button>
+            </div>
+            <ul class="lista-carte">
+                <li class="carta" v-for='card in listaCarte'>
+                    <p>
+                        {{ nomeSbarrato(card.text) }}
+                    </p>
+                    <span>
+                        <i class="fa-regular fa-circle-xmark"></i>
+                    </span>
+                </li>
+            </ul>
+        </main>
 
 
     </div>
