@@ -58,10 +58,6 @@ createApp({
     }
     }, 
     methods: {
-        nomeSbarrato(carta){
-            if (this.listaCarte.done === true){
-                return carta.strike()
-            }
-        }
+      
     }
 }).mount('#app')
