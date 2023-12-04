@@ -4,6 +4,7 @@ const { createApp } = Vue
 createApp({
     data() {
     return {
+        nuovaCarta: '',
         listaCarte : [
             {
                 text : 'BirthingPod',
@@ -58,6 +59,12 @@ createApp({
     }
     }, 
     methods: {
-      
+      aggiungiCarta(carta) {
+        let carta = Object.create(null);
+        carta.text= this.nuovaCarta;
+        carta.done= false;
+        this.listaCarte.push(carta);
+        return carta
+      }
     }
 }).mount('#app')

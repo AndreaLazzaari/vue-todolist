@@ -22,12 +22,12 @@
 
         <main class="container">
             <div class="taskbar">
-                <input type="text" class="nuovo-elemento-lista" name="cartaMtg" id="cartaMtg">
-                <button class="bottone">Inserisci</button>
+                <input type="text" class="nuovo-elemento-lista" name="cartaMtg" id="cartaMtg" v-model="nuovaCarta">
+                <button class="bottone" @click="aggiungiCarta(nuovaCarta)">Inserisci</button>
             </div>
             <ul class="lista-carte">
                 <li class="carta" v-for='card in listaCarte'>
-                    <p v-if= "listaCarte.done === false">
+                    <p v-if= "listaCarte.done !== false">
                         {{card.text}}
                     </p>
                     <p v-else>
