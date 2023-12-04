@@ -64,7 +64,7 @@ createApp({
         carta.text= this.nuovaCarta;
         carta.done= false;
         this.listaCarte.push(carta);
-        return carta
+        
       }
     }
 }).mount('#app')
