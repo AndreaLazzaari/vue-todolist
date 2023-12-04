@@ -59,12 +59,16 @@ createApp({
     }
     }, 
     methods: {
-      aggiungiCarta(carta) {
-        let carta = Object.create(null);
-        carta.text= this.nuovaCarta;
-        carta.done= false;
+      aggiungiCarta() {
+        let carta = {
+            text: this.nuovaCarta,
+            done: false
+        }
+        
         this.listaCarte.push(carta);
         
+        // this.nuovaCarta = carta
+
       }
     }
 }).mount('#app')
